@@ -1,0 +1,29 @@
+@model IEnumerable<Tarefas.Web.Models.TarefaViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Titulo)</th>
+            <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+            <th>@Html.DisplayNameFor(model => model.Concluida)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Titulo</td>
+                <td>@item.Descricao</td>
+                <td>
+                    <partial name="_Status" model="item" />
+                </td>
+                <td style="width: 10px; white-space: nowrap;">
+                    <a class="btn btn-secondary btn-sm" asp-controller="Tarefa" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                    <a class="btn btn-secondary btn-sm" asp-controller="Tarefa" asp-action="Update" asp-route-id="@item.Id">Atualizar</a>
+                    <a class="btn btn-secondary btn-sm" asp-controller="Tarefa" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

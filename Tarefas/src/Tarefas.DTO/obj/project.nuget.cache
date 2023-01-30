@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "OQGIGnqJKzFhZ/1fbx60xozCIUKnHc/cgZtXfSApWfdLFhnV+ttyKWnm7pGUR5U5XCXEDXnzrpmAV88/+BRM3w==",
+  "success": true,
+  "projectFilePath": "D:\\github\\solucao-bootcamp\\Tarefas\\src\\Tarefas.DTO\\Tarefas.DTO.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://ionvt01dev01.ion.local:8181/nuget/IONSistemas'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

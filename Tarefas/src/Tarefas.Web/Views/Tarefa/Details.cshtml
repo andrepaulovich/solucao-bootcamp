@@ -1,0 +1,37 @@
+@model Tarefas.Web.Models.TarefaViewModel
+
+<form asp-action="Create" class="row g-3">
+
+    <h3>Detalhes</h3>
+
+    <input asp-for="Id" hidden />
+
+    <input asp-for="Concluida" hidden />
+
+    <div class="col-12">
+        <div class="form-group">
+            <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
+            <input asp-for="Titulo" class="form-control" disabled/>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="form-group">
+            <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
+            <input asp-for="Descricao" class="form-control" disabled/>
+        </div>
+    </div>
+
+     <div class="col-12">
+        <div class="form-check form-switch">            
+            <input type="checkbox" asp-for="Concluida" class="form-check-input" disabled/>
+            <label class="form-check-label" asp-for="Concluida">@Html.DisplayNameFor(model => model.Concluida)</label>            
+        </div>
+    </div>
+
+    <div class="col-12">
+        <a class="btn btn-secondary" asp-controller="Tarefa" asp-action="Index">Voltar</a>
+    </div>
+                
+</form>
+

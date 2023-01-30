@@ -1,0 +1,37 @@
+@{
+    Layout = "_Login";
+}
+
+@model Tarefas.Web.Models.UsuarioViewModel
+
+<div class="row justify-content-md-center">
+    <div class="col-md-4 g-3">
+        <form method="post" class="g-3">
+            <h1 class="h3 mb-3 font-weight-normal">Minhas Tarefas</h1>
+            <p>Informe seu login e senha para entrar.</p>
+            <hr>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group mb-3">
+                <label asp-for="Email">@Html.DisplayNameFor(model => model.Email)</label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Senha">@Html.DisplayNameFor(model => model.Senha)</label>
+                <input asp-for="Senha" class="form-control">
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>            
+            
+            <div class="form-group mb-3">
+                
+                <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+            
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
